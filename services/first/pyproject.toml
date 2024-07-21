@@ -10,7 +10,12 @@ package-mode = false
 python = "^3.12"
 plus = { path = "../../libs/plus" }
 
+[tool.poetry.scripts]
+my_package_cli = "app.main:first_service_print_plus"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[env]
+PYTHONPATH = "$PYTHONPATH:$(pwd)/../../libs/plus"

@@ -1,4 +1,4 @@
 from plus import print_plus
 
-
-print_plus(12,5)
+def first_service_print_plus():
+    print_plus(x=12,y=5)

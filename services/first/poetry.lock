@@ -17,3 +17,9 @@ url = "../../libs/plus"
 lock-version = "2.0"
 python-versions = "^3.12"
 content-hash = "c784ebb4986dda9d4880b9db4f3ea7d34fd06eb60d7d79b6fe9db070f909f282"
+
+[tool.poetry.scripts]
+test = "app.main.py:first_service_print_plus"
+
+[env]
+PYTHONPATH = "${PYTHONPATH}:$(pwd)/../../libs/plus"
